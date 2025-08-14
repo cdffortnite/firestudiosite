@@ -46,7 +46,7 @@ header.navbar a:hover {
 }
 .hero {
   min-height: 100vh;
-  background: url('assets/images/secao_Cor_fff2e2.png') center/cover fixed no-repeat;
+  background: url('secao_Cor_fff2e2.png') center/cover fixed no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
