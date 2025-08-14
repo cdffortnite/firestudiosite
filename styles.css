@@ -33,30 +33,35 @@ img {
   margin-right: auto;
 }
 .service-image {
-  width: min(80%, 200px);
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
   margin: 1rem auto;
 }
 header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--red);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 97, 97, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 header.navbar ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 header.navbar a {
   text-decoration: none;
   color: var(--light);
+  font-weight: 500;
   transition: color .3s;
 }
 header.navbar a:hover {
