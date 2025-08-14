@@ -69,13 +69,17 @@ header.navbar a:hover {
 }
 .hero {
   min-height: 100vh;
-  background: var(--light) url('secao_Cor_fff2e2.png') center/cover fixed no-repeat;
+  background-color: var(--dark);
+  background-image: url('secao_Cor_fff2e2.png');
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  color: var(--dark);
+  color: var(--light);
 }
 .hero-content img {
   margin: 0.5rem auto;
