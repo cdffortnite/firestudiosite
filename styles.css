@@ -50,7 +50,7 @@ header.navbar {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background: var(--red);
   z-index: 1000;
 }
 header.navbar ul {
@@ -64,16 +64,17 @@ header.navbar a {
   transition: color .3s;
 }
 header.navbar a:hover {
-  color: var(--red);
+  color: var(--dark);
 }
 .hero {
   min-height: 100vh;
-  background: url('secao_Cor_fff2e2.png') center/cover fixed no-repeat;
+  background: var(--light) url('secao_Cor_fff2e2.png') center/cover fixed no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
+  color: var(--dark);
 }
 .hero-content img {
   margin: 0.5rem auto;
@@ -87,6 +88,21 @@ header.navbar a:hover {
 .section {
   padding: 6rem 2rem 2rem;
   text-align: center;
+}
+
+.services {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.quality {
+  background: var(--red);
+  color: var(--light);
+}
+
+.contact {
+  background: var(--light);
+  color: var(--dark);
 }
 .service-list {
   display: flex;
