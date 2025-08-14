@@ -209,3 +209,14 @@ footer.footer {
       max-width: 120px;
     }
   }
+
+  @media (min-width: 769px) {
+    .hero {
+      background-color: #fff;
+      background-image: none;
+      color: var(--dark);
+    }
+    .mission-title {
+      margin-top: 6rem;
+    }
+  }
