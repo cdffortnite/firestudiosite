@@ -4,13 +4,19 @@
   --light: #fff2e2;
   --dark: #0d0d0d;
 }
+@font-face {
+  font-family: 'Eina03';
+  src: url('Eina03.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Eina03', sans-serif;
   background: var(--dark);
   color: var(--light);
   line-height: 1.6;
@@ -24,12 +30,17 @@ img {
 .logo {
   max-width: 150px;
 }
-.mission-title,
 .mission-text,
 .section-title,
 .quality-text,
 .contacts {
   width: min(90%, 600px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-title {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,7 +72,7 @@ header.navbar ul {
 }
 header.navbar a {
   text-decoration: none;
-  color: var(--light);
+  color: #782828;
   font-weight: 500;
   transition: color .3s;
 }
@@ -76,21 +87,38 @@ header.navbar a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  text-align: center;
+  text-align: left;
   padding: 2rem;
   color: var(--light);
+  position: relative;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .hero-content img {
-  margin: 0.5rem auto;
+  margin: 0.5rem 0;
 }
 .hero-buttons {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-video.desktop { display: none; }
+.hero-record { display: none; }
 .section {
   padding: 6rem 2rem 2rem;
   text-align: center;
@@ -153,7 +181,7 @@ header.navbar a:hover {
   background: var(--red);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  border-radius: 0;
   text-decoration: none;
   transition: background .3s, transform .3s;
   display: inline-block;
@@ -169,10 +197,15 @@ header.navbar a:hover {
 .btn.secondary:hover {
   background: var(--red);
 }
+/* mobile record in hero */
+.hero-record .record {
+  top: 45%;
+}
 footer.footer {
   padding: 2rem;
   text-align: center;
-  background: #111;
+  background: var(--light);
+  color: var(--dark);
 }
 /* Fade-in animation */
 .fade-in {
@@ -193,6 +226,10 @@ footer.footer {
     header.navbar {
       flex-direction: column;
       gap: 1rem;
+    }
+    .hero-record {
+      display: block;
+      margin-top: 1rem;
     }
   }
 
@@ -216,6 +253,20 @@ footer.footer {
       background-color: #fff;
       background-image: none;
       color: var(--dark);
+    }
+    .hero-video.desktop { display: block; }
+    .hero-video.mobile { display: none; }
+    .service {
+      border: none;
+    }
+    .quality-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .quality-content .record-wrapper {
+      margin: 0;
     }
     .mission-title {
       margin-top: 6rem;
