@@ -93,6 +93,7 @@ header.navbar a:hover {
   padding: 2rem;
   color: var(--light);
   position: relative;
+  overflow: hidden;
 }
 .hero-content {
   display: flex;
@@ -116,8 +117,9 @@ header.navbar a:hover {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  pointer-events: none;
+  display: none;
 }
-.hero-video.desktop { display: none; }
 .hero-record { display: none; }
 .section {
   padding: 6rem 2rem 2rem;
@@ -227,6 +229,9 @@ footer.footer {
       flex-direction: column;
       gap: 1rem;
     }
+    .hero-video.mobile {
+      display: block;
+    }
     .hero-record {
       display: block;
       margin-top: 1rem;
@@ -255,7 +260,6 @@ footer.footer {
       color: var(--dark);
     }
     .hero-video.desktop { display: block; }
-    .hero-video.mobile { display: none; }
     .service {
       border: none;
     }
