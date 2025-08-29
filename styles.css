@@ -44,7 +44,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  max-width: none;
+  max-width: 250px;
 }
 .service-image {
   width: 200px;
@@ -224,6 +224,16 @@ footer.footer {
 }
 /* Responsive */
   @media (max-width: 768px) {
+    .hero {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content {
+      align-items: center;
+    }
     .service-list {
       flex-direction: column;
       align-items: center;
