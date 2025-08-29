@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
   document.querySelectorAll('.hero-video').forEach(video => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const source = document.createElement('source');
+    source.src = isMobile ? 'celular.mp4' : 'video.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    video.load();
+
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(() => {
